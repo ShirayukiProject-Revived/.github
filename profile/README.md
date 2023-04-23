@@ -8,7 +8,7 @@ To initialize your local repository, use a
 command like this:
 
 ```bash
-repo init -u https://github.com/shirayuki-prjkt/yuki_manifest.git -b tsunemori-13
+repo init -u https://github.com/shirayuki-prjkt/yuki_manifest.git -b tsushima-13
 ```
 
 Then to sync up:
@@ -29,14 +29,14 @@ Lunch:
 ----------------
 
 ```bash
-lunch shirayuki_<device_name>-userdebug
+lunch aosp_$device-userdebug
 ```
 
 Build it:
 ----------------
 
 ```bash
-mka shirayuki
+mka bacon -jX
 ```
 
 ----------------
@@ -44,18 +44,12 @@ mka shirayuki
 Add some configuration in
 your device trees:
 
-If you want build with GApps, add this in your device.mk
+Default build type is Vanilla
+If you want build with PixelExperience GApps, add this in your device.mk
 
-TARGET_GAPPS_ARCH := (arch)
+PIXEL_GAPPS := true
 
-arch can be arm, arm64, x86_64, or x86
 If you want to build vanilla, don't set this
-
------------------
-
-If you want to add Lawnchair, add this in your device.mk
-
-USE_LAWNCHAIR := true
 
 -----------------
 
@@ -63,7 +57,7 @@ Define your bootanimation res by using
 
 TARGET_BOOT_ANIMATION_RES := (res)
 
-res can be 720, 1080, or 1440
+res can be 1080 and 1440 (720 will be added soon)
 
 ------------------
 
