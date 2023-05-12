@@ -8,7 +8,13 @@ To initialize your local repository, use a
 command like this:
 
 ```bash
-repo init -u https://github.com/shirayuki-prjkt/yuki_manifest.git -b tsushima-13
+repo init -u https://github.com/ShirayukiProject-Revived/yuki_manifest.git -b tsunemori-13
+```
+
+Or, if you wanna save your space: 
+
+```bash
+repo init -u https://github.com/ShirayukiProject-Revived/yuki_manifest.git -b tsunemori-13 --depth=1
 ```
 
 Then to sync up:
